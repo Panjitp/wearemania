@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Administrasi Pegawai Kecamatan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+</head>
+<body>
+    <header>
+        <h1>Sistem Admin Kecamatan</h1>
+        <nav class="container">
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#features">Fitur</a></li>
+                <li><a href="#news">Berita</a></li>
+                <li><a href="#contact">Kontak</a></li>
+		        <li><a href="#about">tentang</a></li>
+		        <li><a href="#pengaturan">pengaturan</a></li>
+                <div class="animation start-home"></div>
+            </ul>
+            
+        </nav>
+    <div id="live-time"></div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Selamat Datang di Sistem Administrasi Pegawai Kecamatan</h1>
+            <p>Mengelola data pegawai dengan mudah dan efisien</p>
+            <a href="#features" class="btn">Mulai Sekarang</a>
+        </div>
+        <div class="particles"></div>
+    </section>
+
+    
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Fitur Utama</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="dragon_3.jpg" alt="Pembuatan KTP dan KK" class="feature-image">
+                    <div class="feature-overlay">
+                    <div class="feature-content">
+                        <h3>Manajemen Pegawai</h3>
+                        <p>Kelola data pegawai dengan mudah dan terorganisir.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="dragon_7.jpg" alt="Pengajuan Perizinan Usaha dan IMB" class="feature-image">
+                    <div class="feature-overlay">
+                    <div class="feature-content">
+                        <h3>Laporan Digital</h3>
+                        <p>Buat dan akses laporan secara digital dengan cepat.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="dragon_6.jpg" alt="Pelaporan Pengaduan Publik" class="feature-image">
+                    <div class="feature-overlay">
+                    <div class="feature-content">
+                        <h3>Jadwal Kerja</h3>
+                        <p>Atur dan pantau jadwal kerja pegawai secara efisien.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="dragon_5.jpg" alt="pengurusan surat domisili dan skck" class="feature-image">
+                    <div class="feature-overlay">
+                    <div class="feature-content">
+                        <h3>Pengaturan Sistem</h3>
+                        <p>Kustomisasi sistem sesuai kebutuhan kecamatan Anda.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="dragon_8.jpg" alt="pengurusan surat domisili dan skck" class="feature-image">
+                    <div class="feature-overlay">
+                    <div class="feature-content">
+                        <h3>Manajemen Data Warga</h3>
+                        <p>Kelola data warga secara komprehensif dan terintegrasi dengan sistem kecamatan.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <img src="dragon_9.jpg" alt="pengurusan surat domisili dan skck" class="feature-image">
+                    <div class="feature-overlay">
+                    <div class="feature-content">
+                        <h3>Pengelolaan Perizinan</h3>
+                        <p>Permudah proses pengajuan dan persetujuan perizinan secara digital.</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <a href="layanan-publik.html" class="card-link">
+                        <img src="dragon_10.jpg" alt="pengurusan surat domisili dan skck" class="feature-image">
+                        <div class="feature-overlay">
+                        <div class="feature-content">
+                            <h3>Layanan Publik</h3>
+                            <p>Optimalkan layanan publik dengan sistem yang cepat dan responsif.</p>
+                        </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="container">
+            <h2>Statistik Kecamatan</h2>
+            <div class="stats-grid" id="statsGrid">
+                <div class="stat-card">
+                    <h3>Jumlah Pegawai</h3>
+                    <p>150 Orang</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Layanan Diproses</h3>
+                    <p>2500+ Perizinan</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Warga Terdaftar</h3>
+                    <p>12000+ Warga</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="news" class="news">
+        <div class="container">
+            <h2>Berita Terbaru</h2>
+            <div class="news-grid">
+                <div id="mainNews" class="news-main">
+                    <img src="kominfo-cekhoaks-stophoaks-omnibus-ciptaker-cipta-kerja-status-karyawan-tetap-dihapus.jpg" alt="Berita Utama">
+                    <h3>[Hoaks] Daftar bank yang akan segera di tutup </h3>
+                    <p>Penjelasan:
+
+                        Beredar sebuah unggahan di media sosial Instagram yang menarasikan beberapa bank yang akan segera ditutup. Adapun daftar bank yang disebutkan diantaranya Bank Bukopin, Bank Panin, Bank Tabungan Negara (BTN), Bank Danamon, Bank Agro/BRI Agro, Bank Permata, dan Bank Niaga/CIMB Niaga.
+                        
+                        Faktanya, unggahan yang menarasikan beberapa bank yang akan segera ditutup adalah hoaks. Dilansir dari tirto.id, tidak ditemukan adanya berita dari media kredibel yang menarasikan dan membenarkan daftar bank yang akan ditutup. Otoritas Jasa Keuangan (OJK) sempat mengumumkan 14 bank yang akan ditutup pada tahun 2024. Akan tetapi daftar 14 bank yang akan di tutup tersebut tidak terdapat nama-nama bank yang disebutkan dalam unggahan yang beredar.</p>
+                </div>
+                <div class="news-side">
+                    <div class="news-card" data-title="Hoaks, Cuitan Ganjar yang Dianggap Menyindir Prabowo" data-img="header-periksa-fakta---hoaks-cuitan-ganjar-soal-karyawan-dipecat-dapat-bintang-4--fuad-01_ratio-16x9.jpg" data-content="Ganjar menegaskan, dirinya sama sekali tidak pernah membuat cuitan bernada sindiran terkait penganugerahan gelar Jenderal TNI Kehormatan kepada Prabowo.</br>tirto.id - Presiden Joko Widodo (Jokowi) resmi menganugerahkan gelar Jenderal TNI Kehormatan kepada Menteri Pertahanan Prabowo Subianto. Pemberian gelar penghormatan tersebut berdasarkan Keputusan Presiden Nomor 13/TNI tahun 2024 tentang Penganugerahan Pangkat secara Istimewa, yang terbit pada 21 Februari 2024.
+Mengutip laporan Tirto, pemberian gelar Jenderal TNI Kehormatan itu dilakukan oleh Presiden Jokowi sebagai wujud penghargaan kepada Prabowo.">
+
+                        <img src="header-periksa-fakta---hoaks-cuitan-ganjar-soal-karyawan-dipecat-dapat-bintang-4--fuad-01_ratio-16x9.jpg" alt="Berita 2">
+                        <h4>Hoaks, Cuitan Ganjar yang Dianggap Menyindir Prabowo</h4>
+                    </div>
+                    <div class="news-card" data-title="Sederet Tantangan Pengembangan Biodiesel" data-img="Biodisel.jpeg" data-content="Jakarta, Sawit Indonesia – Upaya RI untuk menggencarkan transisi energi, salah satunya dengan memanfaatkan minyak sawit menjadi biodiesel ternyata tak mulus. Sebab, ada sederet tantangan yang jadi masalah dalam pengembangan biodiesel.
+Padahal, pemerintah tak ingin biodiesel hanya terhenti di B30, tapi ingin lanjut ke B40, B50, B60 dan seterusnya.">
+
+                        <img src="Biodisel.jpeg" alt="Berita 3">
+                        <h4>Sederet Tantangan Pengembangan Biodiesel</h4>
+                    </div>
+                    <div class="news-card" data-title="Pemkot Depok Terus Tingkatkan Kesejahteraan Guru Honorer" data-img="3P3tN6AaFuMZ6mYHf0H21dTuIq3ms1IK6r1Uf0YY.webp" data-content="berita.depok.go.id - Pemerintah Kota (Pemkot) Depok melalui Dinas Pendidikan (Disdik) terus meningkatkan kesejahteraan guru honorer di Kota Depok. Terutama terkait dana insentif.
+Kepala Bidang Pembinaan Sekolah Menengah Pertama (SMP) Disdik Kota Depok Joko Soetrisno mengatakan, ">
+
+                        <img src="3P3tN6AaFuMZ6mYHf0H21dTuIq3ms1IK6r1Uf0YY.webp" alt="Berita 4">
+                        <h4>Pemkot Depok Terus Tingkatkan Kesejahteraan Guru Honorer</h4>
+                    </div>
+                    <div class="news-card" data-title="Janji Manis Pembangunan Infrastruktur Jalan di Tengah Keterbatasan PAD Lampung" data-img="download (2).jpeg" data-content="DASWATI.ID - Pembangunan infrastruktur jalan yang memadai di Provinsi Lampung tidak hanya memperlancar mobilitas, tetapi juga berdampak positif pada perekonomian daerah.
+Namun, keterbatasan pendapatan asli daerah (PAD) Provinsi Lampung, berujung pembangunan jalan seringkali tak kunjung terealisasi.">
+
+                        <img src="download (2).jpeg" alt="Berita 5">
+                        <h4>Janji Manis Pembangunan Infrastruktur Jalan di Tengah Keterbatasan PAD Lampung</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sistem Administrasi Pegawai Kecamatan. All rights reserved.</p>
+    </footer>
+
+    <button class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-lightbulb"></i> <!-- Ikon Lampu -->
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

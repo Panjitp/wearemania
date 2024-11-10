@@ -1,0 +1,759 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+    color: #1f2937;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode {
+    background: #1e272e;
+    color: #ecf0f1; 
+}
+
+header {
+    position: fixed;
+    width: 100%;    
+    background: linear-gradient(90deg, #4f8dd6, #80c6ff);
+    opacity: 0.9;
+    transition: all 0.3s;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    transition: box-shadow 0.6s ease-in-out;
+    box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+body.dark-mode header {
+    box-shadow: inset 0 12px 20px rgba(0, 0, 0, 0.6),
+        inset 0 -8px 16px rgba(0, 0, 0, 0.3); 
+    background-color: rgba(34, 47, 62, 0.95);
+    opacity: 1;
+}
+
+header h1 {
+    position: absolute;
+    color: #34495e;
+    font-size: 24px; 
+    left: 10px;
+    transform: translateY(-20px);
+    animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.dark-mode header h1 {
+    color: #ffffff; 
+}
+
+ul {
+    display: flex;
+    flex: 1;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-left: 0px;
+}
+
+header.scrolled {
+    height: 50px;
+    background: #1a237e;
+    opacity: 1;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 
+        0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: background 0.5s, height 0.5s;
+}
+header.scrolled h1{
+    font-family: 'Orbitron', sans-serif;
+    color: #13273e;
+}
+
+body.dark-mode header.scrolled {
+    background-color: rgba(27, 31, 39, 0.9); 
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 
+        0 15px 30px rgba(0, 0, 0, 0.6);
+    opacity: 1;
+}
+
+nav.container {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+nav {
+    position: relative;
+    height: 50px;
+    background: #336699;
+    backdrop-filter: blur(15px);
+    border-radius: 8px;
+    font-size: 0;   
+    box-shadow: 
+        inset 0 0 10px rgba(255, 255, 255, 0.2), 
+        0 4px 6px rgba(0, 0, 0, 0.2), 
+        0 1px 1px rgba(255, 255, 255, 0.3) inset; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    left: 750px;
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+nav a {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-decoration: none;
+    line-height: 70px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+    transition: color 0.3s, transform 0.3s;
+    overflow: hidden;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ffcc00;
+    top: 60px;
+    left: -100%;
+    bottom: 0;
+    transition: left 0.4s ease;
+}
+
+nav a:hover::after {
+    left: 0;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.3);
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #00bcd4;
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+nav a:nth-child(1) {
+    width: 100px; 
+}
+
+nav ul li:nth-child(2) a {
+    width: 110px; /* Fitur */
+}
+
+nav ul li:nth-child(3) a {
+    width: 100px; /* Berita */
+}
+
+nav ul li:nth-child(4) a {
+    width: 160px; /* Kontak */
+}
+
+nav ul li:nth-child(5) a {
+    width: 140px; /* tentang */
+}
+
+nav ul li:nth-child(6) a {
+    width: 150px; /* pengaturan */
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+}
+
+
+
+body.dark-mode nav ul li a {
+    color: #f0f4f8;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('cebong-telaga.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transform-origin: center;
+    overflow: hidden;
+    transform: translateY(-10px); 
+    animation: floating 4s ease-in-out infinite;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 
+        0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .hero {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 
+        0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(-30px); /* Naik sedikit */
+    }
+    100% {
+        transform: translateY(-20px); /* Kembali ke posisi awal */
+    }
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%; /* Sesuaikan agar elemen tidak terlalu keluar dari container */
+    width: 150%; /* Lebar cukup untuk efek kilauan */
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    opacity: 0.5;  
+    z-index: 2;
+    pointer-events: none;
+    transform: skewX(20deg);
+    filter: blur(8px);
+    animation: realisticShine 3s infinite ease-in-out;
+}
+@keyframes realisticShine {
+    0% {
+        left: -100%; 
+        opacity: 0;
+    }
+    50% {
+        left: 50%; 
+        opacity: 0.8;
+    }
+    100% {
+        left: 150%;
+        opacity: 0;
+    }
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(0px);
+    overflow: hidden;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3978bf;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.btn:hover {
+    background-color: #3569a8;
+    transform: scale(1.05);
+}
+
+.features {
+    padding: 80px 0;
+    background: linear-gradient(270deg, #8EC5FC, #E0C3FC);
+    transition: background-color 0.3s;
+    animation: gradientBG 8s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body.dark-mode .features {
+    background: #2d3748;
+}
+
+body.dark-mode .features h2{
+    color: #e2e8f0;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: #2d3748;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-card {
+    position: relative;
+    border-radius: 10px;
+    width: 300px;
+    max-width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 1);
+    border: 2px solid rgba(0, 0, 0, 1);
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+body.dark-mode .feature-card {
+    box-shadow: 0 15px 30px rgba(0, 150, 255, 0.7), 0 10px 20px rgba(0, 150, 255, 0.5);
+}
+
+.feature-card:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.6), 
+        0 25px 40px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 1);
+  }
+
+  body.dark-mode .feature-card:hover {
+    transform: translateY(-25px);
+    box-shadow: 0 80px 160px rgba(0, 150, 255, 0.6), 
+        0 35px 70px rgba(0, 150, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    transition: opacity 0.3s ease; 
+}
+
+.feature-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.4); 
+    transition: background-color 0.3s ease;
+  }
+
+.feature-card:hover .feature-overlay {
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+body.dark-mode .feature-content p {
+    color: #000000; 
+    font-family: 'Roboto', sans-serif;
+    font: weight 500px;
+    font-size: 16px;
+}
+
+.feature-content p {
+    color: #000000; 
+    font-family: 'Roboto', sans-serif;
+    font: weight 500px;
+    font-size: 16px;
+}
+
+body.dark-mode .feature-content  {
+    color: #171c27; 
+}
+
+body.dark-mode .feature-card:hover .feature-content {
+    color: #f0f4f8; 
+}
+
+body.dark-mode .feature-card:hover .feature-content p {
+    color: #f0f4f8; 
+}
+
+.feature-card:hover .feature-content p {
+    color: #f0f4f8; 
+}
+
+
+.feature-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #271b20;
+    z-index: 1;
+    flex-grow: 1;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+.feature-content h3{
+    font-size: 22px;
+}
+
+.feature-card:hover .feature-content {
+    color:#ffffff;
+}
+
+
+.stats {
+    padding: 50px 0;
+    background-color: #e1edf9;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 
+        0 15px 30px rgba(0, 0, 0, 0.4);
+    transform: translateY(-10px);
+    position: sticky;
+    bottom: 0;
+    padding: 12px 0;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 53px; 
+    z-index: 999;
+    overflow: hidden;
+}
+
+.stats h2 {
+    position: relative;
+    left: 10px;
+    top: -7px;
+}
+
+body.dark-mode .stats {
+    background-color: #2d3b48;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 
+        0 15px 30px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .stat-card {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    box-shadow: 0 20px 40px rgba(0, 150, 255, 0.6), 
+        0 10px 20px rgba(0, 255, 255, 0.4);
+}
+
+body.dark-mode .stat-card h3 {
+    color: #f1c40f; 
+}
+
+body.dark-mode .stat-card p {
+    color: #ecf0f1;
+}
+
+
+.stats.sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.stats-grid {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0px;
+    justify-content: flex-start;
+    height: auto;
+    width: 100%;
+}
+
+
+.stat-card {
+    background-color: #f5f9ff;
+    padding: 13px;
+    min-width: 250px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 
+        0 10px 20px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-5px);
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #6dd5fa, #2980b9, #6dd5fa);
+    opacity: 0.6;
+    filter: blur(15px);
+}
+
+body.dark-mode .stat-card::before {
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #2980b9);
+    opacity: 0.4;
+    filter: blur(10px);
+}
+
+
+
+.news {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #8EC5FC, #E0C3FC);
+    position: relative;
+    overflow: hidden;
+}
+
+body.dark-mode .news {
+    background: #2d3748;
+}
+
+.news h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2rem;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;   
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.news-main {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .news-main {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
+
+.news-main img {
+    width: 100%;
+    border-radius: 8%;
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.news-main img:hover {
+    transform: scale(1.1);
+}
+
+.news-main h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+}
+
+.news-main p {
+    color: #718096;
+    height: 400px;
+    overflow-y: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+}
+
+body.dark-mode .news-main p {
+    color: #e2e8f0;
+}
+
+.news-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.news-card {
+    background-color: #f5f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .news-card {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+.news-card img {
+    border-radius: 8%;
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.news-card h4 {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #3a506b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Base styling for the toggle button */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f0f4f8;
+    border: none;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.3s;
+}
+
+/* Styling untuk ikon lampu */
+.dark-mode-toggle i {
+    font-size: 3rem; /* Perbesar ukuran ikon */
+    transition: color 0.4s ease, transform 0.4s ease; /* Transisi perubahan warna dan posisi */
+    color: #ffdf00; /* Warna lampu menyala (kuning) default */
+}
+
+/* Saat di-hover dalam light mode (lampu mati) */
+.dark-mode-toggle:hover i {
+    color: #cccccc; /* Warna lampu mati (abu-abu) */
+    transform: scale(1.1); /* Sedikit membesar saat hover */
+}
+
+/* Dark mode: lampu mati */
+body.dark-mode .dark-mode-toggle i {
+    color: #cccccc; 
+    transform: rotate(180deg);
+}
+
+
+/* Hover effect in dark mode: lampu menyala */
+body.dark-mode .dark-mode-toggle:hover i {
+    color: #ffdf00; /* Lampu menyala saat di-hover dalam dark mode */
+}
+
+/* Hover effect pada tombol */
+.dark-mode-toggle:hover {
+    transform: scale(1.1); /* Efek hover memperbesar tombol */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Bayangan lebih kuat saat hover */
+}
+
+
+
+.card-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+#live-time {
+    position: absolute;
+    display: flex;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 14px 14px;
+    background: #34495e;
+    border-radius: 8px;
+    max-height: 55px;
+    height: 45px;
+    left: 580px;
+    width: 165px;
+}
+
+body.dark-mode #live-time {
+    background: #1abc9c;
+    color: #2d3748;
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Warna partikel putih */
+    width: 5px; /* Ukuran partikel */
+    height: 5px;
+    border-radius: 50%;
+    opacity: 0;
+}
